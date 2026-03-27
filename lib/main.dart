@@ -1,5 +1,5 @@
-import 'package:basic_flutter/widget/appbar.dart';
-import 'package:basic_flutter/widget/textview.dart';
+import 'package:basic_flutter/widget/ButtonWidget.dart';
+import 'package:basic_flutter/widget/AppbarWidget.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -42,26 +42,34 @@ class HomePage extends StatelessWidget {
       ),
       body: Container(
         padding: EdgeInsets.all(10),
-        // child: Text("Home Page")
-        // child: TextViewWidget.textView(ctx,"Hello Developer")
         // child: TextViewWidget.richText(ctx,"Hello Developer")
-        // child: TextViewWidget.selectableText(ctx,"Hello Developer")
-        // child: TextViewWidget.selectableTextRich(ctx,"")
-        // child: TextViewWidget.textField(ctx, ""),
-        // child: TextViewWidget.textFormField(ctx, "title"),
-        // child: TextViewWidget.defaultTextStyle(ctx, "title"),
         // child: TextViewWidget.editableText(ctx, "Enter your name"),
         child: Column(
           children: [
-            Text("Home Page"),
-            TextViewWidget.textView(ctx, "Hello Developer"),
-            TextViewWidget.richText(ctx, "Hello Developer"),
-            TextViewWidget.selectableText("Hello Developer, this is selectable text",),
-            TextViewWidget.selectableTextRich("Hello Developer, this is selectable text rich ",),
-            TextViewWidget.textField(ctx, "Text Filed"),
-            TextViewWidget.textFormField(ctx),
-            TextViewWidget.defaultTextStyle(ctx),
-            TextViewWidget.editableText(ctx, "Enter your name"),
+            // all type of text
+            Text("Home Text World!"),
+            // TextViewWidget.textView(ctx, "Hello Developer"),
+            // TextViewWidget.richText(ctx, "Hello Developer"),
+            // TextViewWidget.selectableText("Hello Developer, this is selectable text",),
+            // TextViewWidget.selectableTextRich("Hello Developer, this is selectable text rich ",),
+            // TextViewWidget.textField(ctx, "Text Filed"),
+            // TextViewWidget.textFormField(ctx),
+            // TextViewWidget.defaultTextStyle(ctx),
+            // TextViewWidget.editableText(ctx, "Enter your name"),
+
+            // all type of button
+            ButtonWidget.elevatedButton(),
+            Column(
+              children: [
+                ButtonWidget.elevatedButtonIcon(),
+                ButtonWidget.textButton(),
+                ButtonWidget.outlinedButton(),
+                ButtonWidget.iconButton(),
+                ButtonWidget.floatingActionButton(),
+                ButtonWidget.dropdownButton(),
+                ButtonWidget.dropdownButton2(),
+              ],
+            ),
           ],
         ),
       ),

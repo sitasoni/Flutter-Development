@@ -1,0 +1,15 @@
+Notes about Button
+Old vs New (Important)
+❌ Old (deprecated):
+RaisedButton
+FlatButton
+
+✅ New:
+ElevatedButton
+TextButton
+
+Best Practice Strategy Use of Button
+ElevatedButton → main action
+OutlinedButton → Secondary action
+TextButton → cancel/skip/Minor
+IconButton → toolbar/icon only
