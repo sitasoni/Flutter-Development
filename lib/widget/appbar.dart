@@ -66,12 +66,20 @@ class AppBarWidget {
           itemBuilder: (ctx) => [
             PopupMenuItem(child: Text("item 1")),
             PopupMenuItem(child: Text("Item 2")),
-            PopupMenuItem(value : 3,child: Text("Item 2")),
-            PopupMenuItem(value : 4,child: Row(children: [
-              Icon(Icons.search, color: Theme.of(ctx).colorScheme.inversePrimary,),
-              Text("Search"),
-              SizedBox(width: 24,)
-            ],)),
+            PopupMenuItem(value: 3, child: Text("Item 2")),
+            PopupMenuItem(
+              value: 4,
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.search,
+                    color: Theme.of(ctx).colorScheme.inversePrimary,
+                  ),
+                  Text("Search"),
+                  SizedBox(width: 24),
+                ],
+              ),
+            ),
           ],
         ),
       ],

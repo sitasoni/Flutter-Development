@@ -1,4 +1,5 @@
 import 'package:basic_flutter/widget/appbar.dart';
+import 'package:basic_flutter/widget/textview.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -30,27 +31,6 @@ class HomePage extends StatelessWidget {
       // appBar: AppBarWidget.appBarCustomIcon(ctx,"App Bar with back icon"), // icon error
       // appBar: AppBarWidget.appBarIconButton(ctx, "App Bar with logo icon"),
       appBar: AppBarWidget.appBarPopUpMenu(ctx, "Appbar with popup menu"),
-      // appBar: AppBar(
-      //   // multiple images on appbar
-      //   actions: [
-      //     PopupMenuButton(
-      //       onSelected: (value) => Navigator.of(ctx).pop(),
-      //       itemBuilder: (ctx) => [
-      //         PopupMenuItem(
-      //           value: 1,
-      //           child: Row(
-      //             children: [
-      //               Icon(Icons.search, size: 20, color: Colors.greenAccent,),
-      //               SizedBox(width: 10),
-      //               Text("Search"),
-      //             ],
-      //           ),
-      //         ),
-      //         PopupMenuItem(value: 2, child: Text("Cancel")),
-      //       ],
-      //     ),
-      //   ],
-      // ),
       drawer: Drawer(
         child: ListView(
           children: const [
@@ -60,8 +40,31 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      // body: const Center(child: Text("Home Screen")),
-      body: const Center(child: Text("Home Page")),
+      body: Container(
+        padding: EdgeInsets.all(10),
+        // child: Text("Home Page")
+        // child: TextViewWidget.textView(ctx,"Hello Developer")
+        // child: TextViewWidget.richText(ctx,"Hello Developer")
+        // child: TextViewWidget.selectableText(ctx,"Hello Developer")
+        // child: TextViewWidget.selectableTextRich(ctx,"")
+        // child: TextViewWidget.textField(ctx, ""),
+        // child: TextViewWidget.textFormField(ctx, "title"),
+        // child: TextViewWidget.defaultTextStyle(ctx, "title"),
+        // child: TextViewWidget.editableText(ctx, "Enter your name"),
+        child: Column(
+          children: [
+            Text("Home Page"),
+            TextViewWidget.textView(ctx, "Hello Developer"),
+            TextViewWidget.richText(ctx, "Hello Developer"),
+            TextViewWidget.selectableText("Hello Developer, this is selectable text",),
+            TextViewWidget.selectableTextRich("Hello Developer, this is selectable text rich ",),
+            TextViewWidget.textField(ctx, "Text Filed"),
+            TextViewWidget.textFormField(ctx),
+            TextViewWidget.defaultTextStyle(ctx),
+            TextViewWidget.editableText(ctx, "Enter your name"),
+          ],
+        ),
+      ),
     );
   }
 }
